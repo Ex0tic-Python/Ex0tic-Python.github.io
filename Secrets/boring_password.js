@@ -15,7 +15,7 @@ if (input == password) {
     } else if (input == "") {
         alert(empty_response);
     } else if (input != password) {
-        alert(incorrect_response + password);
+        alert(incorrect_response + input);
     } else {
         alert(unknown_response);
     }
