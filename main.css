@@ -1,10 +1,100 @@
+/* For all text */
+/* Text CSS */
 #text_css {
     color: #03fc18;
     font-family: Consolas;
 }
 
+/* ------------------------------------------------------------ */
+
+/* For lines */
+/* In case I want a custom size */
+hr {
+    color: #03fc18;
+}
+/* Preset for large line */
+hr.large {
+    color: #03fc18;
+    width: 900;
+}
+/* Preset for small line */
+hr.small {
+    color: #03fc18;
+    width: 500;
+}
+
+/* ------------------------------------------------------------ */
+
+/* For lists */
+/* Removes the normal settings for an unordered list */
+ul {
+    list-style: none;
+}
+/* Makes the settings for an unordered list */
+ul li::before {
+    content: "\25CF";
+    color: #03fc18;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+/* Makes the settings for a nested unordered list */
+ul li.nested::before {
+    content: "\25CB";
+    color: #03fc18;
+    display: inline-block;
+    width: 1em;
+    margin-left: 2em;
+}
+
+/* ------------------------------------------------------------ */
+
+/* For the footer (bottom) of the page */
+/* Makes a area for the footer stuff */
 #footer_css {
     background-color: #202020;
     color: #03fc18;
     font-family: Consolas;
+}
+
+/* ------------------------------------------------------------ */
+
+/* For Navigation Buttons */
+/* <a> tag */
+.nav_foot a {
+    padding: 12px 20px;
+    border-right: 1px solid rgba(0, 0, 0, .3);
+    background: #000000;
+    color: #006907;
+    text-decoration: none;
+}
+
+/* For when a cursor hovers over the button */
+.nav_foot a:hover {
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+    background: #006907;
+    color: #03fc18;
+}
+
+/* <ul> tag */
+.nav_foot ul {
+    margin: 0;
+    padding: 0;
+    font: consolas;
+    text-transform: uppercase;
+}
+
+/* <li> tag */
+.nav_foot li {
+  display: inline-block;
+}
+
+/* Honestly, no idea what these do */
+.nav_foot li:first-child a {
+  border-radius: 4px 0 0 4px;
+}
+
+.nav_foot li:last-child a {
+  border-right: 0;
+  border-radius: 0 4px 4px 0;
 }
