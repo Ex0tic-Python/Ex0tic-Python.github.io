@@ -27,11 +27,11 @@ hr.small {
 
 /* For lists */
 /* Removes the normal settings for an unordered list */
-ul {
+.list_css ul {
     list-style: none;
 }
 /* Makes the settings for an unordered list */
-ul li::before {
+.list_css ul li::before {
     content: "\25CF";
     color: #03fc18;
     display: inline-block;
