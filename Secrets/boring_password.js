@@ -9,29 +9,19 @@ var secret_response = ";)";
 
 input = prompt("Please enter the Password to continue.\n(Hint In case I forget: My favorite programming Language)");
 
-if (input == password || input == secret) {
-    if (input == password) {
-        alert(correct_response);
-    }
-    else if (input == secret) {
+if (input == password) {
+    alert(correct_response);
+} else if (input == secret) {
         alert(secret_response);
         window.location.href="https://ex0tic-python.github.io/Secrets/notboring_main.html";
-    }
-    else {
-        alert(unknown_response);
-    }
-}
-else {
+} else {
     if (input == null) {
         alert(null_response);
-    }
-    else if (input == "") {
+    } else if (input == "") {
         alert(empty_response);
-    }
-    else if (input != password) {
+    } else if (input != password) {
         alert(incorrect_response + input);
-    }
-    else {
+    } else {
         alert(unknown_response);
     }
     window.location.href="https://ex0tic-python.github.io";
