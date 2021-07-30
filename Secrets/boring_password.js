@@ -5,7 +5,7 @@ var null_response = "Request Denied. Returning to Home Page...\nError-1: User de
 var empty_response = "Nothing was entered. Returning to Home Page...\nError-2: User gave no response\nResponse: ";
 var incorrect_response = "Incorrect Password was entered. Returning to Home Page...\nError-3: User entered incorrect Password\nResponse: ";
 var correct_response = "Correct Password recieved. Entering page...";
-var secret_response = "";
+var secret_response = ";)";
 
 input = prompt("Please enter the Password to continue.\n(Hint In case I forget: My favorite programming Language)");
 
