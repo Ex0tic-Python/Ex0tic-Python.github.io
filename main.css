@@ -58,6 +58,48 @@ ul li.nested::before {
 
 /* ------------------------------------------------------------ */
 
+/* For Buttons */
+/* <a> tag */
+.link_button a {
+    padding: 12px 20px;
+    border-right: 1px solid rgba(0, 0, 0, .3);
+    background: #202020;
+    color: #006907;
+    text-decoration: none;
+}
+
+/* For when a cursor hovers over the button */
+.link_button a:hover {
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+    background: #006907;
+    color: #03fc18;
+}
+
+/* <ul> tag */
+.link_button ul {
+    margin: 0;
+    padding: 0;
+    font: consolas;
+    text-transform: uppercase;
+}
+
+/* <li> tag */
+.link_button li {
+  display: inline-block;
+}
+
+/* Honestly, no idea what these do */
+.link_button li:first-child a {
+  border-radius: 4px 0 0 4px;
+}
+
+.link_button li:last-child a {
+  border-right: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ------------------------------------------------------------ */
+
 /* For the footer (bottom) of the page */
 /* Makes a area for the footer stuff */
 #footer_css {
