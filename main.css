@@ -15,12 +15,12 @@ hr {
 /* Preset for large line */
 hr.large {
     color: #03fc18;
-    width: 900;
+    width: 900px;
 }
 /* Preset for small line */
 hr.small {
     color: #03fc18;
-    width: 500;
+    width: 500px;
 }
 
 /* ------------------------------------------------------------ */
