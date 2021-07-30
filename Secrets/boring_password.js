@@ -9,7 +9,7 @@ var secret_response = ";)";
 
 input = prompt("Please enter the Password to continue.\n(Hint In case I forget: My favorite programming Language)");
 
-if (input == password) || (input == secret) {
+if (input == password || input == secret) {
     if (input == password) {
         alert(correct_response);
     }
