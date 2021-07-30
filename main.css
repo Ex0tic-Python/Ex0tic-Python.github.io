@@ -8,18 +8,12 @@
 /* ------------------------------------------------------------ */
 
 /* For lines */
-/* In case I want a custom size */
-hr {
-    color: #03fc18;
-}
 /* Preset for large line */
 hr.large {
-    color: #03fc18;
     width: 1400px;
 }
 /* Preset for small line */
 hr.small {
-    color: #03fc18;
     width: 800px;
 }
 
