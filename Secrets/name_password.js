@@ -20,3 +20,4 @@ if (input == password) {
         alert(unknown_response);
     }
     window.location.href="https://ex0tic-python.github.io/";
+}
