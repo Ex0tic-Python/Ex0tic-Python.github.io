@@ -27,18 +27,33 @@ hr.small {
 
 /* For lists */
 /* Removes the normal settings for an unordered list */
-.list_css ul {
+ul {
     list-style: none;
 }
 /* Makes the settings for an unordered list */
-.list_css ul li::before {
+.ul_css ul::before {
     content: "\25CF";
     color: #03fc18;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
 }
-/* Makes the settings for a nested unordered list */
+.ul_css li::before {
+    content: "\25CF";
+    color: #03fc18;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+/* Makes settings for an unorlered list using the <li> tag */
+ul li.li_css::before {
+    content: "\25CF";
+    color: #03fc18;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+/* Makes the settings for a nested unordered list using the <li> tag*/
 ul li.nested::before {
     content: "\25CB";
     color: #03fc18;
