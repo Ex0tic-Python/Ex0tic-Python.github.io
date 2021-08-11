@@ -1,22 +1,23 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
+var lang = '';
 
 if (urlParams.has('Language') == true) {
     const param = urlParams.get('Language');
     if (param == 'EN') {
         console.log("Language Parameter set to English(EN)");
-        const lang = 'EN';
+        lang = 'EN';
     } else if (param == 'ES') {
         console.log("Language Parameter set to Spanish(ES)");
-        const lang = 'ES';
+        lang = 'ES';
     } else {
         console.log("Unknown Language Parameter entered. Defaulting to English(EN)");
-        const lang = 'EN';
+        lang = 'EN';
     }
 
 } else {
     console.log("No Language parameter specified. Defaulted to English(EN)")
-    const lang = 'EN';
+    lang = 'EN';
 }
 
 if (lang == 'EN') {
