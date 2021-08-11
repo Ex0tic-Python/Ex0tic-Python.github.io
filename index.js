@@ -1,4 +1,4 @@
-if (URLSearchParams.has('Language') === true) {
+if (urlParams.has('Language') == true) {
     const param = urlParams.get('Language');
     if (param == 'EN') {
         console.log("Language Parameter set to English(EN)");
