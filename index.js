@@ -23,10 +23,6 @@ if (urlParams.has('Language') == true) {
 if (lang == 'EN') {
     console.log("Page Loaded in English(EN)");
 
-    // Meta HTML
-    var title_meta = document.getElementById('title_meta');
-    title_meta.content = "Home Page";
-
     // Main Body HTML
     var main_text = document.getElementById('main_text');
     main_text.setAttribute('style', 'white-space: pre;');
@@ -56,10 +52,6 @@ if (lang == 'EN') {
 
 } else if (lang == 'ES') {
     console.log("Page Loaded in Spanish(ES)")
-    
-    // Meta HTML
-    var title_meta = document.getElementById('title_meta');
-    title_meta.content = "Pagina de Inicio";
 
     // Main Body HTML
     var main_text = document.getElementById('main_text');
