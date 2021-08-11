@@ -3,54 +3,62 @@
 
     <head>
         <!-- Meta Data -->
-        <meta property="og:title"      content="Home Page" />
-        <meta property="og:url"        content="https://ex0tic-python.github.io/" />
-        <meta property="og:image"      content="https://github.com/Ex0tic-Python/ex0tic-python.github.io/blob/main/gaemr%20-%20Copy.jpg?raw=true" />
+        <meta charset  = "UTF-8">
+        <meta name     = "viewport"    content = "width=device-width, initial-scale=1.0">
+        <meta name     = "author"      content = "Ex0tic_Python">
+        <meta name     = "description" content = "Ex0tic_Python's Website">
+        <meta property = "og:title"    content = "" id = "title_meta">
+        <meta property = "og:image"    content = "https://github.com/Ex0tic-Python/ex0tic-python.github.io/blob/main/gaemr.jpg?raw=true">
+
+        <!-- Links -->
+        <link rel = "stylesheet" href = "main.css">
         
-        <!-- External Link's -->
-        <link rel="stylesheet" href="../main.css">
-        
-        <title>Home Page</title>
+        <title id = "title"></title>
     </head>
 
-    <body bgcolor="#101010">
-        <div id="text_css">
+    <body bgcolor = "#101010">
+        <!-- Main Text HTML -->
+        <div id = "text_css">
             <header>
-                <h1>Welcome to my Website!</h1>
-                <hr class="large" align="left" />
+                <h1 id = "page_header"></h1>
+                <hr class = "large" align = "left" />
             </header>
-            <p>Welcome to my website!</p>
-            <p>To start with, I wanted to say thanks for stopping by, It really means a lot to me.</p>
-            <p>Anywas, a bit more info on the site:</p>
-            <p>The reason I made this site is because I had nothing to do and it would be nice to make a site for myself using HTML and CSS which I never got to apply after learning, so its a nice refresher.</p>
-            <p>Because I don't wanna pay every year for a site (even though it's like $7 a year which isn't anything at all), I decided to host it on Github pages. Free hosting for Static pages. So I just wrote the HTML and CSS (which you can see by pressing CTRL+U) and now we are here :)</p>
-            <p>I plan to maintain my website until I get bored, or forget about it.</p>
-            <p>For now, I'll use it for my personal stuff, such as my services and what not.</p>
+            <p id = "main_text"></p>
             <br />
-            <ul class="link_button">
-                <li><a href="https://github.com/Ex0tic-Python/ex0tic-python.github.io" target="_blank">Website Repo</a></li>
+            <ul class = "link_button">
+                <li><a id = "repo_button" href = "https://github.com/Ex0tic-Python/ex0tic-python.github.io" target = "_blank"></a></li>
             </ul>
             <br />
-            <p>Anyways, that's about it. Thanks for stopping by. If you want, take a look around with the navagation buttons below. Again, thanks and have a great day :D</p>
-            <br />
-            <p>Anyways, that's about it. Thanks for stopping by. If you want, take a look around with the navagation buttons below. Again, thanks and have a great day :D</p>
+            <p id = "final_text"></p>
             <br />
         </div>
-        <div id="footer_css">
+
+        <!-- Footer HTML -->
+        <div id = "footer_css">
             <footer>
-                <p>Pages</p>
-                <nav class="nav_foot">
+                <p id = "pages_header"></p>
+                <nav class = "nav_foot">
                     <ul>
-                        <li><a href="https://ex0tic-python.github.io">Home Page</a></li>
-                        <li><a href="https://ex0tic-python.github.io/Ex0tic%20Python/about_main.html">About Me</a></li>
-                        <li><a href="https://ex0tic-python.github.io/Ex0tic%20Python/links_main.html">My Links</a></li>
-                        <li><a href="https://ex0tic-python.github.io/Services/services_main.html">My Services</a></li>
-                        <li><a href="https://ex0tic-python.github.io/Secrets/boring_main.html">...</a></li>
+                        <li><a href = "" id="home_link"></a></li>
+                        <li><a href = "" id="about_link"></a></li>
+                        <li><a href = "" id="links_link"></a></li>
+                        <li><a href = "" id="services_link"></a></li>
+                        <li><a href = "" id="boring_link">...</a></li>
+                    </ul>
+                </nav>
+                <p><br /><br /></p>
+                <p id = "languages_header"></p>
+                <nav class = "nav_foot">
+                    <ul>
+                        <li><a href = "https://ex0tic-python.github.io/?Language=EN">English</a></li>
+                        <li><a href = "https://ex0tic-python.github.io/?Language=ES">Español</a></li>
                     </ul>
                 </nav>
                 <p><br /><br /></p>
             </footer>
         </div>
+        <script src = "index.js"></script>
+
     </body>
 
 </html>
