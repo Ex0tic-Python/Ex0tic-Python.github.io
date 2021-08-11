@@ -1,3 +1,6 @@
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
 if (urlParams.has('Language') == true) {
     const param = urlParams.get('Language');
     if (param == 'EN') {
