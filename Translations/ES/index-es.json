@@ -1,0 +1,29 @@
+{
+    "Page Title": "Pagina de Inicio",
+    "Page Header": "¡Bienvenido a mi sitio Web!",
+    "Main Text 1": "¡Bienvenido a mi sitio web!\nPara empezar, quería dar las gracias por visitar mi sitio web, realmente significa mucho para mí.\nDe todos modos, un poco más de información en el sitio:\n\nLa razón por la que hice este sitio es porque no tenía nada que hacer y Sería bueno hacer un sitio para mí usando HTML y CSS que nunca llegué a aplicar después de aprender.\nPorque no quiero pagar todos los años por un sitio (a pesar de que son como $7 al año, lo que no es nada en absoluto), decidí alojarlo en las páginas de Github. Alojamiento gratuito para páginas estáticas. Así que escribí HTML y CSS (que puedes ver presionando CTRL + U) y ahora estamos aquí :)\nPlaneo mantener mi sitio web hasta que me aburra o me olvide. Por ahora, lo usaré para mis cosas personales, como mis servicios y lo que no.\n\nComo mencioné anteriormente, estoy usando Github para alojar el sitio. Puedes encontrar el repositorio aquí:",
+    "Website Repo Button": "Repositorio del sitio Web",
+    "Main Text 2": "De todos modos, eso es todo. Gracias por visitar mi sitio web. Si lo desea, eche un vistazo con los botones de navegación a continuación. Nuevamente, gracias y que tengas un gran día :D",
+    "Pages Header": "Paginas",
+    "Languages Header": "Idiomas",
+    "Home Link": {
+        "Text Content": "Pagina de Inicio",
+        "URL": "https://ex0tic-python.github.io/?Language=ES"
+    },
+    "About Link": {
+        "Text Content": "Sobre Mí",
+        "URL": "https://ex0tic-python.github.io/Ex0tic%20Python/about_main.html?Language=ES"
+    },
+    "Links Link": {
+        "Text Content": "Mis Enlaces",
+        "URL": "https://ex0tic-python.github.io/Ex0tic%20Python/links_main.html?Language=ES"
+    },
+    "Services Link": {
+        "Text Content": "Mis Servicios",
+        "URL": "https://ex0tic-python.github.io/Services/services_main.html?Language=ES"
+    },
+    "Boring Link": {
+        "Text Content": "...",
+        "URL": "https://ex0tic-python.github.io/Secrets/boring_main.html?Language=ES"
+    }
+}
