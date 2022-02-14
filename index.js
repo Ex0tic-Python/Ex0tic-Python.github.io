@@ -1,31 +1,30 @@
 // All page tags that will be changed according to language
 const page_ids = [
-    "Page Title",
-    "Page Header",
-    "Main Text 1",
-    "Website Repo Button",
-    "Main Text 2",
-    "Pages Header",
-    "Home Link",
-    "About Link",
-    "Links Link",
-    "Services Link",
-    "Boring Link",
-    "Languages Header",
+    "pageTitle",
+    "pageHeader",
+    "mainTextOne",
+    "websiteRepoButton",
+    "mainTextTwo",
+    "pagesHeader",
+    "homeLink",
+    "aboutLink",
+    "linksLink",
+    "servicesLink",
+    "boringLink",
+    "languagesHeader",
 ];
 // Page tags that need their link and text content changed
 const page_links = [
-    "Home Link",
-    "About Link",
-    "Links Link",
-    "Services Link",
-    "Boring Link"
+    "homeLink",
+    "aboutLink",
+    "linksLink",
+    "servicesLink",
+    "boringLink"
 ]
 
 // Function for returning JSON data
 async function getJSONData(requestURL) {
-    fetch(requestURL).then(response => response.json())
-    return response.json;
+    return await fetch(requestURL).then(response => response.json);
 }
 
 // Get URL params and determine the language to load the page in
@@ -41,10 +40,10 @@ if (urlParams.has('Language') == true) {
 
     else if (lang_param == 'ES') {
         console.log("Language Parameter set to Spanish(ES)");
-        data = getJSONData('https://raw.githubusercontent.com/Ex0tic-Python/ex0tic-python.github.io/main/Translations/ES/index-es.json');
+        const data = await getJSONData('https://raw.githubusercontent.com/Ex0tic-Python/ex0tic-python.github.io/main/Translations/ES/index-es.json');
 
-        for (id of page_ids) {
-            if (id in page_links) {
+        for (const id in page_ids) {
+            if (page_links.includes(id)) {
                 document.getElementById(id).textContent = data[id]["Text Content"];
                 document.getElementById(id).href = data[id]["URL"];
             }
