@@ -1,29 +1,25 @@
-/* For all text */
-/* Text CSS */
-#text_css {
+/* Allows for the title to have that charactor cycle effect and not die */
+header {
+    display: flex;
+}
+
+/* For main text */
+main {
     color: #03fc18;
     font-family: Consolas;
 }
 
-/* ------------------------------------------------------------ */
+/* Makes a area for the footer stuff */
+footer {
+    background-color: #202020;
+    color: #03fc18;
+    font-family: Consolas;
+}
 
-/* For Images */
 /* Presets for resizing images to a square of 255px */
-.square_image {
+img.square_image {
     height: 255px;
     width: 255px;
-}
-
-/* ------------------------------------------------------------ */
-
-/* For lines */
-/* Preset for large line */
-hr.large {
-    width: 1400px;
-}
-/* Preset for small line */
-hr.small {
-    width: 800px;
 }
 
 /* ------------------------------------------------------------ */
@@ -105,16 +101,6 @@ ul li.nested::before {
 .link_button li:last-child a {
   border-right: 0;
   border-radius: 0 4px 4px 0;
-}
-
-/* ------------------------------------------------------------ */
-
-/* For the footer (bottom) of the page */
-/* Makes a area for the footer stuff */
-#footer_css {
-    background-color: #202020;
-    color: #03fc18;
-    font-family: Consolas;
 }
 
 /* ------------------------------------------------------------ */

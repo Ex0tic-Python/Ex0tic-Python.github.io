@@ -1,58 +1,33 @@
-// All page tags that will be changed according to language
-const page_ids = [
-    "pageTitle",
-    "pageHeader",
-    "mainTextOne",
-    "websiteRepoButton",
-    "mainTextTwo",
-    "pagesHeader",
-    "homeLink",
-    "aboutLink",
-    "linksLink",
-    "servicesLink",
-    "boringLink",
-    "languagesHeader",
-];
-// Page tags that need their link and text content changed
-const page_links = [
-    "homeLink",
-    "aboutLink",
-    "linksLink",
-    "servicesLink",
-    "boringLink"
-]
+const titleTag = document.querySelector("header");
+let charStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890~`!@#$%^&*()-_=+[{]}|;:',<.>/?";
+const charArr = Array.from(charStr);
 
-// Function for returning JSON data
-async function getJSONData(requestURL) {
-    return await fetch(requestURL).then(response => response.json);
+function randRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-// Get URL params and determine the language to load the page in
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
+function cycChar(charClass, endChar, duration) {
 
-if (urlParams.has('Language') == true) {
-    const lang_param = (urlParams.get('Language')).toUpperCase();
-
-    if (lang_param == 'EN') {
-        console.log("Language Parameter set to English(EN)");
+    function cyc() {
+        const char = titleTag.querySelector(charClass);
+        char.textContent = charArr[randRange(0, 101)];
     }
 
-    else if (lang_param == 'ES') {
-        console.log("Language Parameter set to Spanish(ES)");
-        const data = await getJSONData('https://raw.githubusercontent.com/Ex0tic-Python/ex0tic-python.github.io/main/Translations/ES/index-es.json');
+    function endCyc(inter) {
+        clearInterval(inter);
+        const char = titleTag.querySelector(charClass);
+        char.textContent = endChar;
+    }
 
-        for (const id in page_ids) {
-            if (page_links.includes(id)) {
-                document.getElementById(id).textContent = data[id]["Text Content"];
-                document.getElementById(id).href = data[id]["URL"];
-            }
-            else {
-                document.getElementById(id).textContent = data[id];
-            }
-        }
-    }
-    else {
-        console.log("Unknown Language Parameter entered. Defaulting to English(EN)");
-    }
+    const cycCharInter = setInterval(cyc, 100);
+    setTimeout(endCyc, duration, cycCharInter);
+}
+
+let finalCharsStr = "WelcomeToMyWebsite!";
+const finalChars = Array.from(finalCharsStr);
+
+const durationArr = [1, 1.2, 1.7, 2, 2.1, 2.7, 2.9, 3, 3.5, 4]
+
+for (let i = 0; i <= 19; i++) {
+    cycChar(".head_char_" + String(i+1), finalChars[i], durationArr[randRange(0, 9)] * 1000)
 }
