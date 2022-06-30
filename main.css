@@ -1,19 +1,110 @@
-/* Allows for the title to have that charactor cycle effect and not die */
-header {
+/*
+This file stores the general CSS I typically use on every page.
+Some pages my include their own CSS file as they may have some special
+requirement or features I want to use. This will most likely be used though.
+*/
+
+/* For text Flex Box Settings*/
+.flex_main {
+    display: flex;
+    flex-direction: column;
+
+    color: #03fc18;
+    background-color: #000000;
+    font-size: 17px;
+    font-family: Consolas;
+
+    min-height: 74vh;
+    margin: auto;
+}
+
+.flex_main header {
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
 }
 
-/* For main text */
-main {
+.flex_main main {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline;
+}
+
+
+.flex_footer {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    height: 200px;
+    background-color: #202020;
     color: #03fc18;
     font-family: Consolas;
 }
 
-/* Makes a area for the footer stuff */
-footer {
-    background-color: #202020;
+/* ------------------------------------------------------------ */
+
+/* For buttons */
+button {
+    background-color: #000000;
     color: #03fc18;
-    font-family: Consolas;
+    font-size: 20px;
+
+    border: 1px solid #03fc18;
+    border-radius: 50px;
+
+    padding: 10px 25px;
+    transition-duration: 0.4s;
+}
+
+.button_group button {
+    background-color: #000000;
+    color: #03fc18;
+    font-size: 20px;
+
+    border: 1px solid #03fc18;
+    border-radius: 50px;
+
+    padding: 10px 25px;
+    transition-duration: 0.4s;
+    float: left;
+}
+
+button:hover {
+    background-color: #03fc18;
+    color: #000000;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,10), 0 17px 50px 0 rgba(0,0,0,10);
+
+    cursor: pointer;
+}
+
+
+button span {
+    display: inline-block;
+    position: relative;
+
+    transition: 0.1s;
+}
+  
+button span:after {
+    content: '\21B3';
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    right: -20px;
+
+    transition: 0.1s;
+}
+  
+button:hover span {
+    padding-right: 25px;
+}
+  
+button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 /* Presets for resizing images to a square of 255px */
@@ -29,7 +120,7 @@ img.square_image {
 ul {
     list-style: none;
 }
-/* Makes the settings for an unordered list */
+
 .ul_css ul::before {
     content: "\25CF";
     color: #03fc18;
@@ -44,7 +135,7 @@ ul {
     width: 1em;
     margin-left: -1em;
 }
-/* Makes settings for an unorlered list using the <li> tag */
+
 ul li.li_css::before {
     content: "\25CF";
     color: #03fc18;
@@ -52,95 +143,11 @@ ul li.li_css::before {
     width: 1em;
     margin-left: -1em;
 }
-/* Makes the settings for a nested unordered list using the <li> tag */
+
 ul li.nested::before {
     content: "\25CB";
     color: #03fc18;
     display: inline-block;
     width: 1em;
     margin-left: 2em;
-}
-
-/* ------------------------------------------------------------ */
-
-/* For Buttons */
-/* <a> tag */
-.link_button a {
-    padding: 12px 20px;
-    border-right: 1px solid rgba(0, 0, 0, .3);
-    background: #202020;
-    color: #006907;
-    text-decoration: none;
-}
-
-/* For when a cursor hovers over the button */
-.link_button a:hover {
-    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
-    background: #006907;
-    color: #03fc18;
-}
-
-/* <ul> tag */
-.link_button ul {
-    margin: 0;
-    padding: 0;
-    font: consolas;
-    text-transform: uppercase;
-}
-
-/* <li> tag */
-.link_button li {
-  display: inline-block;
-}
-
-/* Honestly, no idea what these do */
-.link_button li:first-child a {
-  border-radius: 4px 0 0 4px;
-}
-
-.link_button li:last-child a {
-  border-right: 0;
-  border-radius: 0 4px 4px 0;
-}
-
-/* ------------------------------------------------------------ */
-
-/* For Navigation Buttons */
-/* <a> tag */
-.nav_foot_buttons a {
-    padding: 12px 20px;
-    border-right: 1px solid rgba(0, 0, 0, .3);
-    background: #000000;
-    color: #006907;
-    text-decoration: none;
-}
-
-/* For when a cursor hovers over the button */
-.nav_foot_buttons a:hover {
-    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
-    background: #006907;
-    color: #03fc18;
-}
-
-/* <ul> tag */
-.nav_foot_buttons ul {
-    margin: 0;
-    padding: 0;
-    font: consolas;
-    text-transform: uppercase;
-}
-
-/* <li> tag */
-.nav_foot_buttons li {
-  display: inline-block;
-}
-
-/* Honestly, no idea what these do */
-.nav_foot_buttons li:first-child a {
-  border-radius: 4px 0 0 4px;
-}
-
-.nav_foot_buttons li:last-child a {
-  border-right: 0;
-  border-radius: 0 4px 4px 0;
 }

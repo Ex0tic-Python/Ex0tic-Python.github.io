@@ -5,9 +5,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Ex0tic_Python">
-        <meta name="description" content="Home Page">
+        <meta name="description" content="The home page for my website">
         <meta property="og:title" content="Home Page">
-        <meta property="og:image" content="https://github.com/Ex0tic-Python/ex0tic-python.github.io/blob/main/Media/gaemr.jpg?raw=true">
+        <meta property="og:image" content="https://github.com/Ex0tic-Python/ex0tic-python.github.io/blob/main/Media/whole_gaemr.png?raw=true">
 
         <!-- Links -->
         <link rel="stylesheet" href="main.css">
@@ -16,9 +16,26 @@
         <title>Home Page</title>
     </head>
 
-    <body bgcolor="#101010">
-        <!-- Main Text HTML -->
-        <main>
+    <body style="margin: 0;"> <!--For some reason, unless I define margin as 0, it has a weird border-->
+
+        <!--While I avoid scripting in HTML file's, I'm just gonna leave the redirect function here as it's simple-->
+        <script>
+            const linkDict = {
+                "repo": "https://github.com/Ex0tic-Python/ex0tic-python.github.io",
+                "about me": "https://ex0tic-python.github.io/About-Me",
+                "my links": "https://ex0tic-python.github.io/About-Me/My-Links",
+                "my services": "https://ex0tic-python.github.io/Services",
+                "secrets": "https://ex0tic-python.github.io/Secrets",
+                "es-home": "https://ex0tic-python.github.io/es"
+            }
+
+            function redirect(key, new_tab=false) {
+                if (new_tab === false) { window.open(linkDict[key], "_self"); }
+                else { window.open(linkDict[key]); }
+            }
+        </script>
+
+        <div class="flex_main">
             <header>
                 <h1 class="head_char_1">W</h1> <h1 class="head_char_2">e</h1> <h1 class="head_char_3">l</h1> <h1 class="head_char_4">c</h1>
                 <h1 class="head_char_5">o</h1> <h1 class="head_char_6">m</h1> <h1 class="head_char_7">e</h1> <h1 style="white-space: pre;"> </h1>
@@ -27,43 +44,35 @@
                 <h1 class="head_char_14">b</h1> <h1 class="head_char_15">s</h1> <h1 class="head_char_16">i</h1> <h1 class="head_char_17">t</h1>
                 <h1 class="head_char_18">e</h1> <h1 class="head_char_19">!</h1>
             </header>
-            <hr>
-            <img class="square_image" align="right" src="https://github.com/Ex0tic-Python/ex0tic-python.github.io/blob/main/Media/gaemr.jpg?raw=true">
+            
+            <main>
+                <img class="square_image" align="right" src="https://github.com/Ex0tic-Python/ex0tic-python.github.io/blob/main/Media/whole_gaemr.png?raw=true" />
+                <hr class="square_image_line"/>
+                <p>Welcome to my website!</p>
+                <p>I made this page as a way of not only expirementing with Web Dev and learning it, but also making something paractical I've always wanted to make. As a result, I'll constantly add new stuff and update this page to add any new features I like or think of. You can also find a lot of other stuff relating to me here so take a look around!</p>
+                <p>Wondering how you can have a page of your own? Or maybe want just take a look at the (terrible) source code? Well, this page is hosted on Github Pages meaning I have a repository for it. The link to it is below:</p>
+                <br />
+                <button type="button" onclick="redirect('repo', true)"><span>Github Repository</span></button>
+                <br />
+                <br />
+                <p>If you find a problem with the website, feel free to open a pull request or drop an issue in the repository and I'll take a look at it when I can. Anyways, just wanted to say thanks for stopping by and taking a look. I really appreciate it as this took a bit of effort to learn and debug. It's nice to have your hard work seen by anyone.</p>
+            </main>
+        </div>
 
-            <p>Welcome to my website</p>
-            <p>This page serves as a "static" version of my main page located <a href="https://ex0ticpython.000webhostapp.com/" target="_blank">here</a> should that page ever go down. It's also in case someone doesn't trust the other page because the other page has a warning from google before entry stating the site may be unsafe. They both do mostly the same thing, with only a few differences as that page also includes PHP, unlike this one only written in HTML, CSS, and Javascript. They are both similar enough.</p>
-            <p>Regardless, thank you for stopping by. Feel free to take a look around at the different pages and what not. If you find a problem or something wrong, feel free to drop an issue or pull request on the repository as this is hosted on Github Pages. The link to it is below:</p>
-            <br/>
-            <ul class="link_button">
-                <li>
-                    <a href="https://github.com/Ex0tic-Python/ex0tic-python.github.io" target="_blank">Website Repository</a>
-                    <t><sup>(I'm a button. Hover over me)</sup></t></t>
-                </li>
-            </ul>
-            <br/>
-            <p>Use the buttons below to navigate to different parts of my website. Every page should have them. Just press "Home Page" to get back here.</p>
-            <br/>
-        </main>
-
-        <!-- Footer HTML -->
-        <footer>
-            <h2>Pages</h2>
-            <nav class="nav_foot_buttons">
-                <ul>
-                    <li><a href="https://ex0tic-python.github.io/">Home Page</a></li>
-                    <li><a href="https://ex0tic-python.github.io/Ex0tic%20Python/">About Me</a></li>
-                    <li><a href="https://ex0tic-python.github.io/Ex0tic%20Python/">My Links</a></li>
-                    <li><a href="https://ex0tic-python.github.io/Services/">My Services</a></li>
-                    <li><a href="https://ex0tic-python.github.io/Secrets/">...</a></li>
-                </ul>
-                <br/>
-                <br/>
-                <h2>Languages</h2>
-                <ul>
-                    <li><a href="https://ex0tic-python.github.io/">English</a></li>
-                    <li><a href="https://ex0tic-python.github.io/es/">Español</a></li>
-                </ul>
-            </nav>
-        </footer>
+        <div class="flex_footer">
+            <footer>
+                <nav class="nav_foot_buttons">
+                    <h2>Pages</h2>
+                    <button style="opacity: 0.4;cursor: not-allowed;" type="button">Home</button>
+                    <button type="button" onclick="redirect('about me')"><span>About Me</span></button>
+                    <button type="button" onclick="redirect('my links')"><span>My Links</span></button>
+                    <button type="button" onclick="redirect('my services')"><span>My Services</span></button>
+                    <button type="button" onclick="redirect('secrets')"><span>...</span></button>
+                    <h2>Languages</h2>
+                    <button style="opacity: 0.4;cursor: not-allowed;" type="button">English</button>
+                    <button type="button" onclick="redirect('es-home')"><span>Español</span></button>
+                </nav>
+            </footer>
+        </div>
     </body>
 </html>
