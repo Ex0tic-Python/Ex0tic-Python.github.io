@@ -1,28 +1,51 @@
-var password = "Python";
-var secret = "Ex0tic";
-var unknown_response = "Unknown Error occured. Returning to Home Page...\nError-0: Unknown Error occured";
-var null_response = "Request Denied. Returning to Home Page...\nError-1: User denied Request\nResponse: None";
-var empty_response = "Nothing was entered. Returning to Home Page...\nError-2: User gave no response\nResponse: ";
-var incorrect_response = "Incorrect Password was entered. Returning to Home Page...\nError-3: User entered incorrect Password\nResponse: ";
-var correct_response = "Correct Password recieved. Entering page...";
-var secret_response = ";)";
+// Konami code :p
+const key_code = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
+let key_streak = 0;
 
-input = prompt("Please enter the Password to continue.\n(Hint In case I forget: My favorite programming Language)");
-
-if (input == password) {
-    alert(correct_response);
-} else if (input == secret) {
-        alert(secret_response);
-        window.location.href="https://ex0tic-python.github.io/Secrets/notboring_main.html";
-} else {
-    if (input == null) {
-        alert(null_response);
-    } else if (input == "") {
-        alert(empty_response);
-    } else if (input != password) {
-        alert(incorrect_response + input);
+function on_key_press(event) {
+    if (event.key == key_code[key_streak]) {
+        key_streak = key_streak + 1;
+        if (key_streak == 11) {
+            document.removeEventListener("keydown", on_key_press);
+            document.getElementById("cover").remove();
+        }
     } else {
-        alert(unknown_response);
+        key_streak = 0;
     }
-    window.location.href="https://ex0tic-python.github.io";
+}
+
+document.addEventListener("keydown", on_key_press);
+
+
+const titleTag = document.querySelector("header");
+const charArr = Array.from("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890~`!@#$%^&*()-_=+[{]}|;:',<.>/?");
+
+function randRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function cycChar(charClass, endChar, duration) {
+
+    function cyc() {
+        const char = titleTag.querySelector(charClass);
+        char.textContent = charArr[randRange(0, 101)];
+    }
+
+    function endCyc(inter) {
+        clearInterval(inter);
+        const char = titleTag.querySelector(charClass);
+        char.textContent = endChar;
+    }
+
+    const cycCharInter = setInterval(cyc, 100);
+    setTimeout(endCyc, duration, cycCharInter);
+}
+
+let finalCharsStr = "WelcomeToMyWebsite!";
+const finalChars = Array.from(finalCharsStr);
+
+const durationArr = [1, 1.2, 1.7, 2, 2.1, 2.7, 2.9, 3, 3.5, 4]
+
+for (let i = 0; i <= 19; i++) {
+    cycChar(".char_" + String(i+1), finalChars[i], durationArr[randRange(0, 9)] * 1000)
 }
