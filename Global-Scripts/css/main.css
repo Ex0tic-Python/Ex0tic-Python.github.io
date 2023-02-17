@@ -1,166 +1,201 @@
-/*
-This file stores the general CSS I typically use on every page.
-Some pages my include their own CSS file as they may have some special
-requirement or features I want to use. This will most likely be used though.
-*/
-
-/* General Settings */
+/* Resets certain elements that have base settings */
 body {
-    /* For some reason, unless I define margin as 0, it has a weird border */
-    margin: 0;
-}
 
-/* ------------------------------------------------------------ */
+    all: unset;
 
-/* For text Flex Box Settings */
-/* -----Review----- */
-.flex_main {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    margin: 8px;
 
     color: #03fc18;
     background-color: #000000;
+
+    font-family: Consolas;
     font-size: 17px;
-    font-family: Consolas;
-
-    min-height: 74vh;
-    margin: auto;
 }
 
-.flex_main header {
-    margin-left: 20px;
-    margin-right: 20px;
-    display: flex;
+ul {
+    all:unset
 }
 
-.flex_main main {
-    margin-left: 20px;
-    margin-right: 20px;
-    display: inline;
-}
-
-
-.flex_footer {
-    margin-left: 20px;
-    margin-right: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-    height: 200px;
-    background-color: #202020;
-    color: #03fc18;
-    font-family: Consolas;
-}
-
-/* ------------------------------------------------------------ */
-
-/* For buttons */
-/* -----Review----- */
 button {
-    background-color: #000000;
-    color: #03fc18;
-    font-size: 20px;
-
-    border: 1px solid #03fc18;
-    border-radius: 50px;
-
-    padding: 10px 25px;
-    transition-duration: 0.4s;
-}
-
-.button_group button {
-    background-color: #000000;
-    color: #03fc18;
-    font-size: 20px;
-
-    border: 1px solid #03fc18;
-    border-radius: 50px;
-
-    padding: 10px 25px;
-    transition-duration: 0.4s;
-    float: left;
-}
-
-button:hover {
-    background-color: #03fc18;
-    color: #000000;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,10), 0 17px 50px 0 rgba(0,0,0,10);
-
+    all: unset;
     cursor: pointer;
 }
 
+/* A bunch of classes related to the sticky bar */
+header.sticky_bar {
+    /* Centers the sticky bar and adds some top margin */
+    margin: auto;
+    margin-top: 20px;
 
-button span {
-    display: inline-block;
+    /* Sets height and width */
+    height: 50px;
+    max-width: 95vw;
+
+    /* Marks it as a flexbox and makes it sticky */
+    display: flex;
+    position: sticky;
+    top: 0px;
+
+    /* Makes the border for the box */
+    border: 3px solid #03fc18;
+    border-top-style: none;
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+
+    /* Set some base settings for the flex items */
+    color: #03fc18;
+    background-color: #000000;
+    font-size: 20px;
+}
+
+header.sticky_bar>div.directory {
+    /* Padding because it's the first element */
+    padding-left: 10px;
+    margin: auto;
+    flex-grow: 0;
+    color: #505050;
+}
+
+header.sticky_bar>div.title {
+    /* Don't wanna squish the title and directory too close together */
+    padding-left: 3px;
+
+    margin: auto;
+    flex-grow: 5;
+    font-size: 40px;
+}
+
+header.sticky_bar>div.return_to_top button {
+    line-height: 50px;
+    text-align: center;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    flex-grow: 1;
+    transition-duration: .2s;
+}
+
+header.sticky_bar>div.return_to_top button:hover {
+    color: #000000;
+    background-color: #03fc18;
+}
+
+header.sticky_bar>div.nav_dropdown {
     position: relative;
-
-    transition: 0.1s;
+    display: inline-block;
 }
-  
-button span:after {
-    content: '\21B3';
-    opacity: 0;
 
+header.sticky_bar>div.nav_dropdown:hover span.nav_span {
+    color: #000000;
+    background-color: #03fc18;
+}
+
+header.sticky_bar>div.nav_dropdown:hover div.dropdown_content {
+    display: block;
+}
+
+header.sticky_bar>div.nav_dropdown>span.nav_span {
+    padding-top: 13px;
+    padding-bottom: 15px;
+    line-height: 50px;
+    text-align: center;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    flex-grow: 1;
+    transition-duration: 0.2s;
+}
+
+header.sticky_bar>div.nav_dropdown>div.dropdown_content {
+    display: none;
     position: absolute;
-    top: 0;
-    right: -20px;
-
-    transition: 0.1s;
-}
-  
-button:hover span {
-    padding-right: 25px;
-}
-  
-button:hover span:after {
-    opacity: 1;
-    right: 0;
+    min-width: 160px;
+    box-shadow: 0px 4px 16px 0px #03fc18;
+    z-index: 1;
+    background-color: #000000;
+    transition-duration: 0.2s;
 }
 
-/* ------------------------------------------------------------ */
-
-/* Presets for resizing images to a square of 255px */
-img.square_image {
-    height: 255px;
-    width: 255px;
-}
-
-/* ------------------------------------------------------------ */
-
-/* For lists */
-/* -----Review----- */
-/* Removes the normal settings for an unordered list */
-ul {
-    list-style: none;
-}
-
-.ul_css ul::before {
-    content: "\25CF";
+header.sticky_bar>div.nav_dropdown>div.dropdown_content>a {
     color: #03fc18;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-.ul_css li::before {
-    content: "\25CF";
-    color: #03fc18;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition-duration: 0.2s;
 }
 
-ul li.li_css::before {
-    content: "\25CF";
-    color: #03fc18;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+header.sticky_bar>div.nav_dropdown>div.dropdown_content>a:hover {
+    color: #000000;
+    background-color: #03fc18;
 }
 
-ul li.nested::before {
-    content: "\25CB";
-    color: #03fc18;
+header.sticky_bar>div.settings_dropdown {
+    position: relative;
     display: inline-block;
-    width: 1em;
-    margin-left: 2em;
+}
+
+header.sticky_bar>div.settings_dropdown:hover span.settings_span {
+    color: #000000;
+    background-color: #03fc18;
+}
+
+header.sticky_bar>div.settings_dropdown:hover div.dropdown_content {
+    display: block;
+}
+
+header.sticky_bar>div.settings_dropdown>span.settings_span {
+    padding-top: 13px;
+    padding-bottom: 15px;
+    line-height: 50px;
+    text-align: center;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    flex-grow: 1;
+    border-bottom-right-radius: 10px;
+    transition-duration: 0.2s;
+}
+
+header.sticky_bar>div.settings_dropdown>div.dropdown_content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 4px 16px 0px #03fc18;
+    z-index: 1;
+    background-color: #000000;
+    transition-duration: 0.2s;
+}
+
+header.sticky_bar>div.settings_dropdown>div.dropdown_content>a {
+    color: #03fc18;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition-duration: 0.2s;
+}
+
+header.sticky_bar>div.settings_dropdown>div.dropdown_content>a:hover {
+    color: #000000;
+    background-color: #03fc18;
+}
+
+/* Some styling for buttons */
+a.link_button {
+    background-color: #000000;
+    color: #03fc18;
+    font-size: 20px;
+
+    border: 1px solid #03fc18;
+    border-radius: 50px;
+
+    padding: 10px 25px;
+    transition-duration: 0.2s;
+    text-decoration: none;
+}
+
+a.link_button:hover {
+    background-color: #03fc18;
+    color: #000000;
+    padding: 15px 30px;
+    box-shadow: 0px 4px 16px 0px #03fc18;
+    cursor: pointer;
 }

@@ -1,0 +1,120 @@
+discord
+ow
+riot
+spotify
+Steam
+code Wars
+leetcode
+my discord Server
+my favorite discord Server
+leetcode
+my web Page
+github
+epic games
+genshin
+
+/
+
+
+
+/* Website-Specific Classes
+(There has to be a better way to do this right? Like, come on. This is just stupid and repetetive. It's all boiler-plate code.) */
+.card.discord::before {
+    background: #415cba;
+}
+.card.discord h1 {
+    color: #415cba;
+}
+.card.contentBox.hoverButton.discord {
+    background: #415cba;
+}
+
+.card.spotify::before {
+    background: #0c8536;
+}
+.card.spotify h1 {
+    color: #0c8536;
+}
+.card.contentBox.hoverButton.spotify {
+    background: #0c8536;
+}
+
+.card.steam::before {
+    background: #415cba;
+}
+.card.steam h1 {
+    color: #415cba;
+}
+.card.contentBox.hoverButton.steam {
+    background: #415cba;
+}
+
+
+
+.card {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    margin-right: 25px;
+    background: #191919;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card:hover::before {
+    top: -80%;
+    height: 80%;
+    transform: skewY(400deg);
+}
+
+.card .imgBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+  
+.card.contentBox {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.card.contentBox h1 {
+    font-size: 30px;
+    font-weight: 750;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.card.contentBox.hoverButton {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: #191919;
+    text-decoration: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.card:hover.contentBox.hoverButton {
+    top: 0;
+    opacity: 1;
+}
+
+.cardImage {
+    height: 300px;
+    width: auto;
+}

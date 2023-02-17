@@ -1,0 +1,124 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Consolas";
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #212121;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Website-specific attrs
+  (There must be a simpler and cleaner way right?) */
+  .card.discord::before {
+      background: #415cba;
+  }
+  .card.discord h1 {
+      color: #415cba;
+  }
+  .card.discord:hover .contentBox a {
+      background: #415cba;
+  }
+  
+  .card.spotify h1 {
+      color: #0c8536;
+  }
+  .card.spotify:hover .contentBox a {
+      background: #0c8536;
+  }
+  .card.spotify::before {
+      background: #0c8536;
+  }
+  
+  /* Actual card stuff */
+  /* Make the base of the card */
+  .card {
+      position: relative;
+      width: 320px;
+      height: 480px;
+      margin-right: 25px;
+      background: #191919;
+      border-radius: 30px;
+      overflow: hidden;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    transform: skewY(335deg);
+    transition: 0.5s;
+  }
+  
+  .card:hover::before {
+    top: -80%;
+    height: 80%;
+    transform: skewY(400deg);
+  }
+  
+  /* Do some settings for the card's image */
+  .card .imgBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+  }
+  
+  .card .imgBox img {
+      height: 300px;
+      width: auto;
+  }
+  
+  /* Do some settings for the card's content */
+  .card .contentBox {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+  }
+  
+  .card .contentBox h1 {
+    font-size: 35px;
+    font-weight: 750;
+    letter-spacing: 1px;
+  }
+  
+  .card .contentBox a {
+    color: #191919;
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+  }
+  
+  .card:hover .contentBox a {
+    top: 0;
+    opacity: 1;
+  }
+  
