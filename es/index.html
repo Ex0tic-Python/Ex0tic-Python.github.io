@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <!-- Meta Data -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="author" content="Ex0tic_Python">
+        <meta name="description" content="La página de inicio para mi sitio web">
+        <meta property="og:title" content="Página de Inicio">
+        <meta property="og:description" content="La página de inicio para mi sitio web">
+        <meta property="og:image" content="../Media/whole_gaemr.png">
+
+        <!-- Links -->
+        <link rel="stylesheet" href="../Global-Scripts/css/main.css">
+        <!-- <script type="module" src="index.js"></script>   Not required as of yet but I plan to use it later--->
+
+        <title>Página de Inicio</title>
+    </head>
+
+    <body>
+        <!-- Some code that is simple so I'll just stick it here -->
+        <script>
+            function gotoTop() {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+        </script>
+
+        <header class="sticky_bar">
+            <div class="directory">
+                Página de Inicio\
+            </div>
+            <div class="title">
+                ¡Bienvenidos a mi sitio web!
+            </div>
+            <div class="return_to_top">
+                <button onclick="gotoTop()" id="gotoTopBtn" title="Volver al Principio">↑ Volver al Principio ↑</button>
+            </div>
+            <div class="dropdown">
+                <span class="dropdown_span">≡ Botones de Navegacion ≡</span>
+                <div class="dropdown_content">
+                    <a class="unselectable_dropdown_button">Página de Inicio</a>
+                    <a href="https://ex0tic-python.github.io/es/Sobre-Mi/">Sobre Mi</a>
+                    <a href="https://ex0tic-python.github.io/es/Sobre-Mi/Mis-Enlaces/">Mis Enlaces</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <span class="dropdown_span">⚙ Ajustes ⚙</span>
+                <div class="dropdown_content">
+                    <a class="unselectable_dropdown_button">TBD</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <img style="float: right;" src="../Media/whole_gaemr.png" alt="Img">
+            <p style="text-decoration: underline;">Advertencia: Yo hablo español, pero no tenía ganas de traducir esta página a mano en este momento, así que solo usé Google Translate, así que si ves algún error o algo así, no te preocupes :)</p>
+
+            <p>¡Bienvenidos a mi sitio web!</p>
+            <p>Hice esta página como una forma no solo de experimentar con Web Dev y aprenderlo, sino también de hacer algo práctico. Como resultado, agregaré constantemente cosas nuevas y actualizaré esta página para agregar cualquier característica nueva que me guste o se me ocurra. También puedes encontrar muchas otras cosas relacionadas conmigo aquí, ¡así que echa un vistazo!</p>
+            <p>¿Te preguntas cómo puedes tener una página propia? ¿O tal vez quieras echar un vistazo al (terrible) código fuente? Bueno, esta página está alojada en Github Pages, lo que significa que tengo un repositorio para ella. El enlace a la misma está a continuación:</p>
+            <br>
+            <a class="link_button" href="https://github.com/Ex0tic-Python/ex0tic-python.github.io" target="_blank">
+                Repositorio Github
+            </a>
+            <br><br>
+            <p>Si encuentra un problema con el sitio web, siéntase libre de abrir una solicitud de extracción o dejar un problema en el repositorio y lo revisaré cuando pueda. De todos modos, solo quería darte las gracias por pasarte y echar un vistazo. Realmente lo aprecio ya que esto tomó un poco de esfuerzo para aprender y depurar. Es bueno que alguien vea tu arduo trabajo.</p>
+        </main>
+
+    </body>
+
+</html>
