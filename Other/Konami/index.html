@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Meta Data -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="author" content="Ex0tic_Python">
+        <meta name="description" content="The home page for my website">
+        <meta property="og:title" content="Home Page">
+        <meta property="og:description" content="The home page for my website">
+        <meta property="og:image" content="Media/whole_gaemr.png">
+
+        <!-- Links -->
+        <link rel="stylesheet" href="../../Global-Scripts/css/main.css">
+        <script type="module" src="main.js"></script>
+
+        <title>Home Page</title>
+    </head>
+
+    <body>
+        <!-- Some code that is simple so I'll just stick it here -->
+        <script>
+            function gotoTop() {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+        </script>
+
+        <header class="sticky_bar">
+            <div class="directory">
+                Home\
+            </div>
+            <div class="title">
+                Welcome to my Website!
+            </div>
+            <div class="return_to_top">
+                <button onclick="gotoTop()" id="gotoTopBtn" title="Return to Top">↑ Return to Top ↑</button>
+            </div>
+            <div class="dropdown">
+                <span class="dropdown_span">≡ Navigation Buttons ≡</span>
+                <div class="dropdown_content">
+                    <a class="unselectable_dropdown_button">Home Page</a>
+                    <a href="https://ex0tic-python.github.io/About-Me/">About Me</a>
+                    <a href="https://ex0tic-python.github.io/About-Me/My-Links/">My Links</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <span class="dropdown_span">⚙ Settings ⚙</span>
+                <div class="dropdown_content">
+                    <a class="unselectable_dropdown_button">TBD</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <img style="float: right;" src="Media/whole_gaemr.png" alt="Img">
+            <span id="konami_tag"></span>
+        </main>
+
+    </body>
+
+</html>
